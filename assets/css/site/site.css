@@ -1,0 +1,14 @@
+.input-error {
+  border-color: red;
+  border-width: medium;
+  color: red;
+}
+ .select-input-error {
+  border-color: red;
+  border-width: medium;
+}
+.input-success {
+  border-color: #28501e;
+  border-width: medium;
+  color: #28501e;
+}

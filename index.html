@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripcion</title>
+    <link rel="stylesheet" href="assets/css/lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/toastr/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <link rel="stylesheet" href="assets/css/site/site.css"/>
+  </head>
+  <body>
+    <header class="bg-black">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand text-white fs-2" href="#">Yoniber</a>
+          </div>
+    </header>
+    
+    <main class="container-fluid d-flex align-items-center justify-content-center">
+
+      <div id="content-container" class="row container-fluid">
+
+        <div class="col-12 col-sm-12 col-md-4 offset-md-4 mt-5">
+          <div class="card">
+            <div class="card-header bg-black text-light text-center">
+              <h5>Datos personales</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="provincia" class="form-label">Provincia:</label>
+                <input type="text" class="form-control" id="provincia" />
+              </div>
+              <div class="mb-3">
+                <label for="ciudad" class="form-label">Ciudad:</label>
+                <input type="text" class="form-control" id="ciudad" />
+              </div>
+              <div class="mb-3">
+                <label for="sector" class="form-label">Sector:</label>
+                <input type="text" class="form-control" id="sector" />
+              </div>
+              <div class="mb-3">
+                <label for="calle" class="form-label">Calle:</label>
+                <input type="text" class="form-control" id="calle" />
+              </div>
+              <div class="mb-3">
+                <label for="carrera" class="form-label">Carrera:</label>
+                <select class="form-select" aria-label="Default select example" id="carrera">
+                  <option selected>Seleccionar carrera</option>
+                  <option value="Software">Software</option>
+                  <option value="Redes">Redes</option>
+                  <option value="Multimedia">Multimedia</option>
+                </select>
+              </div>
+              <div class="">
+                  <button
+                  id="btn-save"
+                  type="button"
+                  class="btn btn-outline-primary w-100 mb-2"
+                >
+                  Next
+                </button>
+                <button
+                  id="btn-reset"
+                  type="button"
+                  class="btn btn-outline-warning w-100 me-2"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4" id="contact-container">
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="assets/js/lib/jquery/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/lib/bootstrap/bootstrap.min.js"></script>
+     <script src="assets/js/lib/toastr/toastr.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="assets/js/site/index/indexJquery.js"></script>
+  </body>
+</html>
