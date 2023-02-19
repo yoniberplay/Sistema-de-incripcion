@@ -36,6 +36,9 @@ $(document).ready(function () {
     if (confirm(text) == true) {
     Reset();
     irDatosPersonales();
+    toastr.success("Seleccion registrada satisfactoriamente.", "Completada", {
+      TimeOut: 2000,
+    });
     } 
    
   });
