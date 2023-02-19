@@ -1,3 +1,8 @@
+*{
+  font-family: 'Bellota Text', cursive;
+  font-family: 'Roboto', sans-serif;
+  }
+
 .input-error {
   border-color: red;
   border-width: medium;
