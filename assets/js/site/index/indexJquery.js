@@ -4,6 +4,74 @@ const carreras = {
 	Software: "Software",
 }
 
+const formulario =`
+
+<div id="content-container" class="row container-fluid">
+
+
+
+        <div class="col-12 col-sm-12 col-md-4 offset-md-4 mt-5">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Datos personales</li>
+  </ol>
+</nav>
+          <div class="card">
+            <div class="card-header bg-black text-light text-center">
+              <h5>Datos personales</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="provincia" class="form-label">Provincia:</label>
+                <input type="text" class="form-control" id="provincia" />
+              </div>
+              <div class="mb-3">
+                <label for="ciudad" class="form-label">Ciudad:</label>
+                <input type="text" class="form-control" id="ciudad" />
+              </div>
+              <div class="mb-3">
+                <label for="sector" class="form-label">Sector:</label>
+                <input type="text" class="form-control" id="sector" />
+              </div>
+              <div class="mb-3">
+                <label for="calle" class="form-label">Calle:</label>
+                <input type="text" class="form-control" id="calle" />
+              </div>
+              <div class="mb-3">
+                <label for="carrera" class="form-label">Carrera:</label>
+                <select class="form-select" aria-label="Default select example" id="carrera">
+                  <option selected>Seleccionar carrera</option>
+                  <option value="Software">Software</option>
+                  <option value="Redes">Redes</option>
+                  <option value="Multimedia">Multimedia</option>
+                </select>
+              </div>
+              <div class="">
+                  <button
+                  id="btn-save"
+                  type="button"
+                  class="btn btn-outline-primary w-100 mb-2"
+                >
+                  Next
+                </button>
+                <button
+                  id="btn-reset"
+                  type="button"
+                  class="btn btn-outline-warning w-100 me-2"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+`;
+
 $(document).ready(function () {
   //variables del document
   let valueName = "";
@@ -13,6 +81,9 @@ $(document).ready(function () {
   let valueSector = "";
   let valueCalle = "";
   //Events
+
+//!-------------------------------------------
+  // $("#main-container").append(formulario);
 
   $("#content-container").on("click", "#btn-save", function () {
     CreateContact();
@@ -244,15 +315,19 @@ $(document).ready(function () {
       .removeClass("input-error")
       .removeClass("input-success")
       .focus();
-    $("#phone").val("").removeClass("input-error").removeClass("input-success");
+    $("#provincia").val("").removeClass("input-error").removeClass("input-success");
+    $("#ciudad").val("").removeClass("input-error").removeClass("input-success");
+    $("#sector").val("").removeClass("input-error").removeClass("input-success");
+    $("#calle").val("").removeClass("input-error").removeClass("input-success");
+    $("#carrera").removeClass("select-input-error").removeClass("input-success");
 
-    $("#radio-container input[type='radio']:checked").prop("checked", false);
-    $("#radio-container")
-      .removeClass("input-error")
-      .removeClass("input-success");
-
+   
     valueName = "";
     valuePhone = "";
+    valueSector= "";
+    valueCalle= "";
+    valueCarrera= "";
+    valueProvincia= "";
   }
 
   function Validate() {
